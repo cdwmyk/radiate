@@ -2,7 +2,7 @@
   "name": "radiate",
   "version": "0.1.0",
   "description": "A responsive dashboard written in React - built for all screen sizes",
-  "author": "Chris Wheatley <chriswheatley87@gmail.com>",
+  "author": "Chris Wheatley <>",
   "license": "MIT",
   "main": "src/lib/server.js",
   "repository": {
