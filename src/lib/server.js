@@ -62,7 +62,14 @@ app.post('/data/:filename', (req, res) => {
 
   const filename = req.params.filename
   let body = ''
-  const filePath = path.join(staticsPath + filename)
+
+  if (!/^[a-zA-Z0-9_.-]+$/.test(filename) || filename.includes('..')) {
+    return res.status(400).send({
+      error: 'Invalid filename.'
+    })
+  }
+
+  const filePath = staticsPath + filename
 
   req.on('data', (data) => {
     body += data
